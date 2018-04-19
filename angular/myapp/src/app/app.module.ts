@@ -3,11 +3,25 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { MyFirstComponent } from './my-first/my-first.component';
+import { MySecondComponent } from './my-second/my-second.component';
+import { SecondInnerComponent } from './my-second/second-inner.component';
+import { MyJumboComponent } from './my-jumbo/my-jumbo.component';
+import { PartOneComponent } from './my-jumbo/part-one.component';
+import { PartTwoComponent } from './my-jumbo/part-two.component';
+import { DividerComponent } from './my-jumbo/divider.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyFirstComponent,
+    MySecondComponent,
+    SecondInnerComponent,
+    MyJumboComponent,
+    PartOneComponent,
+    PartTwoComponent,
+    DividerComponent
   ],
   imports: [
     BrowserModule
