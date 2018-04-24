@@ -12,6 +12,9 @@ import { PartOneComponent } from './my-jumbo/part-one.component';
 import { PartTwoComponent } from './my-jumbo/part-two.component';
 import { DividerComponent } from './my-jumbo/divider.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { IntrCompComFirstComponent } from './intr-comp-com-first/intr-comp-com-first.component';
+import { BtnPnlComponent } from './intr-comp-com-first/btn-pnl.component';
+import { ColPnlComponent } from './intr-comp-com-first/col-pnl.component';
 
 
 @NgModule({
@@ -24,7 +27,10 @@ import { DatabindingComponent } from './databinding/databinding.component';
     PartOneComponent,
     PartTwoComponent,
     DividerComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    IntrCompComFirstComponent,
+    BtnPnlComponent,
+    ColPnlComponent
   ],
   imports: [
     BrowserModule,
