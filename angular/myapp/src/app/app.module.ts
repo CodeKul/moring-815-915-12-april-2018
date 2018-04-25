@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { IntrCompComFirstComponent } from './intr-comp-com-first/intr-comp-com-first.component';
 import { BtnPnlComponent } from './intr-comp-com-first/btn-pnl.component';
 import { ColPnlComponent } from './intr-comp-com-first/col-pnl.component';
+import { LocalRefComponent } from './local-ref/local-ref.component';
+import { NgbSampleComponent } from './ngb-sample/ngb-sample.component';
 
 
 @NgModule({
@@ -30,11 +33,15 @@ import { ColPnlComponent } from './intr-comp-com-first/col-pnl.component';
     DatabindingComponent,
     IntrCompComFirstComponent,
     BtnPnlComponent,
-    ColPnlComponent
+    ColPnlComponent,
+    LocalRefComponent,
+    NgbSampleComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
