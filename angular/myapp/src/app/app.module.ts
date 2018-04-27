@@ -18,6 +18,8 @@ import { BtnPnlComponent } from './intr-comp-com-first/btn-pnl.component';
 import { ColPnlComponent } from './intr-comp-com-first/col-pnl.component';
 import { LocalRefComponent } from './local-ref/local-ref.component';
 import { NgbSampleComponent } from './ngb-sample/ngb-sample.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { SizeMakerDirective } from './directives/size-maker.directive';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { NgbSampleComponent } from './ngb-sample/ngb-sample.component';
     BtnPnlComponent,
     ColPnlComponent,
     LocalRefComponent,
-    NgbSampleComponent
+    NgbSampleComponent,
+    DirectivesComponent,
+    SizeMakerDirective
   ],
   imports: [
     BrowserModule,
