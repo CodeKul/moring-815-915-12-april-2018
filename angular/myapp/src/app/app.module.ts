@@ -20,6 +20,7 @@ import { LocalRefComponent } from './local-ref/local-ref.component';
 import { NgbSampleComponent } from './ngb-sample/ngb-sample.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { SizeMakerDirective } from './directives/size-maker.directive';
+import { CstStrDirective } from './directives/cst-str.directive';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { SizeMakerDirective } from './directives/size-maker.directive';
     LocalRefComponent,
     NgbSampleComponent,
     DirectivesComponent,
-    SizeMakerDirective
+    SizeMakerDirective,
+    CstStrDirective
   ],
   imports: [
     BrowserModule,
