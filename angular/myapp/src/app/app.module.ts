@@ -1,3 +1,4 @@
+import { DataService } from './services/data.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -22,6 +23,9 @@ import { DirectivesComponent } from './directives/directives.component';
 import { SizeMakerDirective } from './directives/size-maker.directive';
 import { CstStrDirective } from './directives/cst-str.directive';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ServicesComponent } from './services/services.component';
+import { ServicesService } from './services/services.service';
+import { DepndentComponent } from './services/depndent.component';
 
 
 @NgModule({
@@ -43,15 +47,16 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     DirectivesComponent,
     SizeMakerDirective,
     CstStrDirective,
-    LifecycleComponent
+    LifecycleComponent,
+    ServicesComponent,
+    DepndentComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-
     NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [ServicesService, DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
