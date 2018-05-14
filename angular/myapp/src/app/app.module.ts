@@ -26,6 +26,8 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ServicesComponent } from './services/services.component';
 import { ServicesService } from './services/services.service';
 import { DepndentComponent } from './services/depndent.component';
+import { DropdownDirective } from './directives/dropdown.directive';
+import { NavbarComponent } from './directives/navbar/navbar.component';
 
 
 @NgModule({
@@ -49,7 +51,9 @@ import { DepndentComponent } from './services/depndent.component';
     CstStrDirective,
     LifecycleComponent,
     ServicesComponent,
-    DepndentComponent
+    DepndentComponent,
+    DropdownDirective,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
