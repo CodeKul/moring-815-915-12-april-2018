@@ -1,3 +1,4 @@
+import { MyFormsModule } from './forms/forms.module';
 import { AdminModule } from './admin/admin.module';
 import { LoginModule } from './login/login.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { FpModule } from './fp/fp.module';
+import { ProjectModModule } from './project-mod/project-mod.module';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { FpModule } from './fp/fp.module';
 
     LoginModule,
     AdminModule,
-    FpModule
+    FpModule,
+    ProjectModModule,
+    MyFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

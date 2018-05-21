@@ -7,7 +7,7 @@
   <input #pass type="password" id="inputPassword" class="form-control" placeholder="Password" required>
   <div class="checkbox mb-3">
     <label>
-      <a [routerLink]="['fp','aa@gmail.com']">Forget password</a>
+      <a [routerLink]="['fp','aa@gmail.com']" [queryParams]="{sid : 545}">Forget password</a>
     </label>
   </div>
   <button class="btn btn-lg btn-primary btn-block" type="button" (click)="onLogin(adNm.value, pass.value)">Sign in</button>

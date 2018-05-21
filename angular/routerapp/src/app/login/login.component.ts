@@ -16,6 +16,11 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(adNm: string, pass: string) {
-    this.router.navigate(['admin', adNm])
+    this.router.navigate(['admin', adNm], {
+      queryParams : {
+        sid : new Date().getMilliseconds(),
+        tid : new Date().getMinutes()     
+      }
+    })
   }
 }
