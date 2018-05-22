@@ -1,4 +1,4 @@
-<form class="form-horizontal">
+<form class="form-horizontal" [formGroup]="frmGrp" (ngSubmit)="onSub()">
   <fieldset>
 
     <!-- Form Name -->
@@ -9,23 +9,26 @@
       <label class="col-md-4 control-label" for="textinput">First name</label>
       <div class="col-md-4">
         <input 
-          name="textinput" 
+          formControlName="usNm" 
           type="text" 
           placeholder="John" 
           class="form-control input-md">
       </div>
+      <label class="col-md-4 control-label text-muted" *ngIf="frmGrp.controls.usNm.errors?.required">Enter your name</label>
     </div>
 
     <!-- Text input-->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="email">E-mail</label>
+      <label class="col-md-4 control-label text-muted" for="email">E-mail</label>
       <div class="col-md-4">
         <input 
-          name="email" 
+          formControlName="eml" 
           type="text" 
           placeholder="john.smith@mail.com" 
           class="form-control input-md">
       </div>
+      <label class="col-md-4 control-label text-muted" *ngIf="frmGrp.controls.eml.errors?.required">Enter your email</label>
+      <label class="col-md-4 control-label text-muted" *ngIf="frmGrp.controls.eml.errors?.email">Check Email Pattern</label>
     </div>
 
     <!-- Password input-->
@@ -33,18 +36,19 @@
       <label class="col-md-4 control-label" for="passwordinput">Password</label>
       <div class="col-md-4">
         <input 
-          name="passwordinput" 
+          formControlName="pass" 
           type="password" 
           placeholder="Enter your password" 
           class="form-control input-md">
       </div>
+      <label class="col-md-4 control-label text-muted" *ngIf="frmGrp.controls.pass.errors?.required">Enter the password</label>
     </div>
     
     <!-- Button -->
     <div class="form-group">
       <label class="col-md-4 control-label" for="singlebutton"></label>
       <div class="col-md-4">
-        <button type="submit" class="btn btn-primary">Register</button>
+        <button [disabled]="!frmGrp.valid" type="submit" class="btn btn-primary">Register</button>
       </div>
     </div>
 
