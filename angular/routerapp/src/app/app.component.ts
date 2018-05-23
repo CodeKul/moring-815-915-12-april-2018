@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as EventBus from 'vertx3-eventbus-client'
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor() {
+   
+  }
+  
 }

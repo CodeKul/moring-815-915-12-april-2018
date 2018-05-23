@@ -1,3 +1,4 @@
+import { HttpObservablesComponent } from './http-observables/http-observables.component';
 import { TmDrvnComponent } from './forms/tm-drvn/tm-drvn.component';
 import { AnalytcsComponent } from './project-mod/analytcs/analytcs.component';
 import { AdminGuard } from './admin/admin.guard';
@@ -39,6 +40,7 @@ const routes: Routes = [
     children: projRoutes
   },
   { path: 'forms', component: FormsComponent, children: formsRoute },
+  {path: 'http', component : HttpObservablesComponent},
   { path: '**', component: LoginComponent }
 ];
 

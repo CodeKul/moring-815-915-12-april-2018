@@ -1,3 +1,4 @@
+import { HttpObservablesModule } from './http-observables/http-observables.module';
 import { MyFormsModule } from './forms/forms.module';
 import { AdminModule } from './admin/admin.module';
 import { LoginModule } from './login/login.module';
@@ -23,7 +24,8 @@ import { ProjectModModule } from './project-mod/project-mod.module';
     AdminModule,
     FpModule,
     ProjectModModule,
-    MyFormsModule
+    MyFormsModule,
+    HttpObservablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
