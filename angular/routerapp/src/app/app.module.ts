@@ -1,3 +1,4 @@
+import { PipesModule } from './pipes/pipes.module';
 import { HttpObservablesModule } from './http-observables/http-observables.module';
 import { MyFormsModule } from './forms/forms.module';
 import { AdminModule } from './admin/admin.module';
@@ -25,7 +26,8 @@ import { ProjectModModule } from './project-mod/project-mod.module';
     FpModule,
     ProjectModModule,
     MyFormsModule,
-    HttpObservablesModule
+    HttpObservablesModule,
+    PipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

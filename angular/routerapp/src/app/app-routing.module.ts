@@ -1,3 +1,4 @@
+import { PipesComponent } from './pipes/pipes.component';
 import { HttpObservablesComponent } from './http-observables/http-observables.component';
 import { TmDrvnComponent } from './forms/tm-drvn/tm-drvn.component';
 import { AnalytcsComponent } from './project-mod/analytcs/analytcs.component';
@@ -40,7 +41,8 @@ const routes: Routes = [
     children: projRoutes
   },
   { path: 'forms', component: FormsComponent, children: formsRoute },
-  {path: 'http', component : HttpObservablesComponent},
+  { path: 'http', component: HttpObservablesComponent },
+  { path: 'pipes', component: PipesComponent },
   { path: '**', component: LoginComponent }
 ];
 
