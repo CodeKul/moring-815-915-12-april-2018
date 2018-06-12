@@ -1,3 +1,5 @@
+import { FileService } from './file.service';
+import { FormsModule } from '@angular/forms';
 import { WebService } from './web.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -7,9 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers : [WebService],
+  providers : [WebService, FileService],
   declarations: [HttpObservablesComponent]
 })
 export class HttpObservablesModule { }

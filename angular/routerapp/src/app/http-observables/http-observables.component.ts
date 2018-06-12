@@ -1,3 +1,4 @@
+import { FileService } from './file.service';
 import { PostCode } from './data-model';
 import { WebService } from './web.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
@@ -15,10 +16,12 @@ export class HttpObservablesComponent implements OnInit, OnDestroy {
   cntr: number
   mySub: Subscription
   itvrSub: Subscription
-  postCode : PostCode
+  postCode: PostCode
+  fileTxt: string
 
   constructor(
-    private web : WebService
+    private web: WebService,
+    private file : FileService
   ) { }
 
   ngOnInit() {
@@ -57,10 +60,18 @@ export class HttpObservablesComponent implements OnInit, OnDestroy {
     })
   }
   globalErrorHandler(err: Error) {
-    
+
   }
   ngOnDestroy(): void {
     this.itvrSub.unsubscribe()
     this.mySub.unsubscribe()
+  }
+
+  onSave() {
+    this.file.saveFile(this.fileTxt).subscribe(
+      res => console.log(res),
+      err => console.log(err),
+      () => console.log('Complete')
+    )
   }
 }
